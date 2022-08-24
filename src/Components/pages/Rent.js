@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Typography, TextField } from "@mui/material";
+import RentFilters from "./SearchFilters/RentFilters";
 
 function Rent() {
   return (
@@ -38,7 +39,9 @@ function Rent() {
       <section>
         <Grid container my={4}>
           <Grid item md={3} xs={12}>
-            
+              <center>
+                <RentFilters />
+              </center>
           </Grid>
         </Grid>
       </section>
