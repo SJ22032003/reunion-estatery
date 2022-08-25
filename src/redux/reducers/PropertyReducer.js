@@ -1,5 +1,5 @@
 import { properties } from "../../Components/data/PropertiesRent";
-import { GET_FILTERS, REMOVE_FILTERS } from "../actionType";
+import { GET_FILTERS, REMOVE_FILTERS, GET_SEARCH } from "../actionType";
 
 const initialState = {
   properties: properties,
@@ -19,6 +19,17 @@ export const PropertyReducer = (state = initialState, action) => {
       newState = {
         ...state,
         properties: properties,
+      };
+      return newState;
+
+    case GET_SEARCH:
+      newState = {
+        ...state,
+        properties: properties.filter((property) => {
+          return property.name
+            .toLowerCase()
+            .includes(action.payload.toLowerCase());
+        }),
       };
       return newState;
 
