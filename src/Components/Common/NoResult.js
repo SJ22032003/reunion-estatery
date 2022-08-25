@@ -3,7 +3,7 @@ import noResult from "../assets/noResult.png";
 
 function NoResult() {
   return (
-    <div>
+    <div style={{minHeight:'32vh'}}>
       <center>
         <img src={noResult} alt="no result :(" />
       </center>
