@@ -6,7 +6,6 @@ import LocationLogo from '../../assets/location.png'
 import PriceLogo from '../../assets/pricetag.png'
 import BedLogo from '../../assets/beds.png'
 import propertyType from '../../assets/propertyType.png'
-import { Range } from 'react-range';
 
 import {
   locations,
@@ -30,6 +29,24 @@ const useStyles = makeStyles((theme) => ({
 function RentFilters() {
 
   const classes = useStyles();
+
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+    }),
+    indicatorSeparator: (base) => ({
+      ...base,
+      display: "none",
+    }),
+    dropdownIndicator: (base) => ({
+      ...base,
+      backgroundColor:'#e7e6f9',
+      color:'#7367f8',
+      borderRadius:'50%',
+    })
+  }
 
   return (
     <>
@@ -81,17 +98,7 @@ function RentFilters() {
                   )}
                   options={locations}
                   placeholder="Location"
-                  styles={{
-                    control: (base) => ({
-                      ...base,
-                      border: 0,
-                      boxShadow: "none",
-                    }),
-                    indicatorSeparator: (base) => ({
-                      ...base,
-                      display: "none",
-                    }),
-                  }}
+                  styles={customStyles}
                 />
               </Box>
             </Grid>
@@ -117,17 +124,7 @@ function RentFilters() {
                   value={prices.find((price) => price.value === prices.value)}
                   options={prices}
                   placeholder="Prices"
-                  styles={{
-                    control: (base) => ({
-                      ...base,
-                      border: 0,
-                      boxShadow: "none",
-                    }),
-                    indicatorSeparator: (base) => ({
-                      ...base,
-                      display: "none",
-                    }),
-                  }}
+                  styles={customStyles}
                 />
               </Box>
             </Grid>
@@ -153,17 +150,7 @@ function RentFilters() {
                   value={bedrooms.find((bed) => bed.value === bedrooms.value)}
                   options={bedrooms}
                   placeholder="Bedrooms"
-                  styles={{
-                    control: (base) => ({
-                      ...base,
-                      border: 0,
-                      boxShadow: "none",
-                    }),
-                    indicatorSeparator: (base) => ({
-                      ...base,
-                      display: "none",
-                    }),
-                  }}
+                  styles={customStyles}
                 />
               </Box>
             </Grid>
@@ -184,17 +171,7 @@ function RentFilters() {
                   )}
                   options={propertyTypes}
                   placeholder="Property Type"
-                  styles={{
-                    control: (base) => ({
-                      ...base,
-                      border: 0,
-                      boxShadow: "none",
-                    }),
-                    indicatorSeparator: (base) => ({
-                      ...base,
-                      display: "none",
-                    }),
-                  }}
+                  styles={customStyles}
                 />
               </Box>
             </Grid>
