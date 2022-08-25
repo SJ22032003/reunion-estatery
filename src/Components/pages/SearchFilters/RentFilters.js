@@ -33,9 +33,6 @@ const useStyles = makeStyles((theme) => ({
 
 function RentFilters() {
   const classes = useStyles();
-  const myPropertyData = useSelector(
-    (state) => state.PropertyReducer.properties
-  );
   const dispatch = useDispatch();
 
   const [selectedFilters, setSelectedFilters] = React.useState({
@@ -46,12 +43,18 @@ function RentFilters() {
   });
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    const myData = getFilteredProperties(myPropertyData, selectedFilters);
+
+    const myData = getFilteredProperties(selectedFilters);
     dispatch(getFilters(myData));
   };
 
   const handleClear = (e) => {
+    setSelectedFilters({
+      location: null,
+      price: null,
+      beds: null,
+      propertyType: null,
+    })
     dispatch(removeFilters());
   };
 
@@ -124,9 +127,7 @@ function RentFilters() {
                 />
                 <Select
                   className={classes.inputField}
-                  value={locations.find(
-                    (location) => location.value === locations.value
-                  )}
+                  value={locations.find((location) => location.value === selectedFilters.location)||null}
                   options={locations}
                   placeholder="Location"
                   onChange={(e) => {
@@ -158,7 +159,7 @@ function RentFilters() {
                 <img src={PriceLogo} alt="$" className={classes.filterIcon} />
                 <Select
                   className={classes.inputField}
-                  value={prices.find((price) => price.value === prices.value)}
+                  value={prices.find((price) => price.value === selectedFilters.price) || null}
                   options={prices}
                   placeholder="Prices"
                   onChange={(e) => {
@@ -190,7 +191,7 @@ function RentFilters() {
                 <img src={BedLogo} alt="bed" className={classes.filterIcon} />
                 <Select
                   className={classes.inputField}
-                  value={bedrooms.find((bed) => bed.value === bedrooms.value)}
+                  value={bedrooms.find((bed) => bed.value === selectedFilters.beds) || null}
                   options={bedrooms}
                   placeholder="Bedrooms"
                   onChange={(e) => {
@@ -220,8 +221,8 @@ function RentFilters() {
                 <Select
                   className={classes.inputField}
                   value={propertyTypes.find(
-                    (type) => type.value === propertyTypes.value
-                  )}
+                    (type) => type.value === selectedFilters.propertyType
+                  ) || null}
                   options={propertyTypes}
                   placeholder="Type"
                   onChange={(e) => {
@@ -246,13 +247,14 @@ function RentFilters() {
             >
               <Button
                 variant="contained"
+                size='small'
                 className={classes.btn}
                 sx={{
                   backgroundColor: "#7065ed",
                   borderRadius: "10px",
                   marginRight: "5px",
                   fontSize: "clamp(13px, 1.2vw, 16px)",
-                  padding: "10px 20px",
+                  padding: "0px 25px",
                   color: "#FFFFFF",
                   textTransform: "none",
                   "&:hover": {
@@ -264,8 +266,8 @@ function RentFilters() {
               >
                 Search
               </Button>
-              <Button title="clear" onClick={handleClear}>
-                <HighlightOffIcon sx={{ color: "#7065ed" }} />
+              <Button onClick={handleClear} size='small' variant='outlined' sx={{textTransform:'none',fontSize: "clamp(13px, 1.2vw, 16px)", border:'2px solid #7065ed',padding:"0px 5px", color:'#7065ed'}}>
+                Clear
               </Button>
             </Grid>
           </Grid>

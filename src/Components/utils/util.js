@@ -1,10 +1,12 @@
+import { properties } from "../data/PropertiesRent";
+
 export const setPrice = (price) => {
   return price.toLocaleString();
 };
 
-export const getFilteredProperties = (myPropertyData, myFilteredData) => {
-  const { location, price, beds, propertyType } = myFilteredData;
-  let filteredData = [...myPropertyData];
+export const getFilteredProperties = (myFilteredData) => {
+  let { location, price, beds, propertyType } = myFilteredData;
+  let filteredData = [...properties];
 
   if (location) {
     filteredData = filteredData.filter(
@@ -24,5 +26,4 @@ export const getFilteredProperties = (myPropertyData, myFilteredData) => {
   }
 
   return filteredData;
-
 };

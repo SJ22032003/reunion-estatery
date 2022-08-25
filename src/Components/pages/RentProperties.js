@@ -12,7 +12,7 @@ function RentProperties() {
         return (
           <Grid
             item
-            sx={12}
+            xs={12}
             md={6}
             lg={4}
             my={2}
