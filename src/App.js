@@ -1,7 +1,7 @@
 import React from "react";
 import MyRoutes from "./Components/routes/Routes";
 import useCheckSize from "./Components/Hooks/useCheckSize";
-import Navbar from "./Components/Common/Navbar/Navbar";
+import Navbar from "./Components/Common/Navbar/index";
 
 function App() {
   const size = useCheckSize();
