@@ -7,7 +7,7 @@ import Footer from "./Components/Common/Footer/Footer";
 function App() {
   const size = useCheckSize();
   return (
-    <div>
+    <div id="mainDiv">
       <header>
         <Navbar />
       </header>
