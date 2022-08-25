@@ -52,11 +52,11 @@ function RentSearch() {
           >
             <TextField
               value={search}
-              label="Search with Property Name"
+              label="Search with Name"
               variant="outlined"
               size="small"
               color="secondary"
-              sx={{ backgroundColor: "#fff", margin: "12px auto" }}
+              sx={{ backgroundColor: "#fff", margin: "12px auto", width:{xs:'70%',sm:'unset'}}}
               onChange={(e) => setSearch(e.target.value)}
             />
             <Button
