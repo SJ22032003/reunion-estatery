@@ -1,1 +1,2 @@
-export const GET_BED = 'GET_BED';
+export const GET_FILTERS = 'GET_FILTERS';
+export const REMOVE_FILTERS = 'REMOVE_FILTERS'
