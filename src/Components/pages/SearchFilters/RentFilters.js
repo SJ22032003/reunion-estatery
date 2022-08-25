@@ -21,10 +21,11 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   inputField: {
+    fontFamily: "Roboto",
     width: "100%",
     textAlign: "left",
     margin: "6px 0 0 10px",
-    fontSize: "clamp(15px,2vw,20px)",
+    fontSize: "clamp(15px,1.5vw,18px)",
   },
   filterIcon: {
     width: "30px",

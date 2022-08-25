@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar() {
+function NavbarDesktop() {
   const classes = useStyles();
   const [navTabs, setNavTabs] = useState([
     "Rent",
@@ -111,4 +111,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarDesktop;
