@@ -10,6 +10,13 @@ body {
   background-color: #eeedf2;
 }
 
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  height: 100vh;
+}
+
 nav a {
   text-decoration: none;
 }

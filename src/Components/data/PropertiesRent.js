@@ -8,7 +8,7 @@ export const properties = [
         type:'House',
         area:'8x10 m',
         price:500,
-        image:'https://source.unsplash.com/random/?house,home',
+        image:'https://source.unsplash.com/random/?house,building',
         popular:true,
     },
     {
@@ -68,7 +68,7 @@ export const properties = [
         type:'House',
         area:'8x10 m',
         price:10000,
-        image:'https://source.unsplash.com/random/?house',
+        image:'https://source.unsplash.com/random/?house,building',
         popular:false,
     },
     {
