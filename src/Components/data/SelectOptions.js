@@ -11,10 +11,11 @@ export const locations = [
 ];
 
 export const prices = [
-    { value: '500', label: "$500-$2500" },
-    { value: '2500', label: "$2500-$5000" },
-    { value: '5000', label: "$5000-$10000" },
-    { value: '10000', label: "$10000-$20000" },
+    { value: '500', label: "$500" },
+    { value: '2500', label: "$2500" },
+    { value: '5000', label: "$5000" },
+    { value: '10000', label: "$10000" },
+    { value: '20000', label: "$20000" },
 ]
 
 export const bedrooms = [

@@ -8,7 +8,7 @@ export const properties = [
         type:'House',
         area:'8x10 m',
         price:500,
-        image:'https://source.unsplash.com/random/?house',
+        image:'https://source.unsplash.com/random/?house,home',
         popular:true,
     },
     {
@@ -20,7 +20,7 @@ export const properties = [
         type:'Studio',
         area:'2x10 m',
         price:500,
-        image:'https://source.unsplash.com/random/?studio',
+        image:'https://source.unsplash.com/random/?apartment,studio',
         popular:false,
     },
     {
@@ -32,7 +32,7 @@ export const properties = [
         type:'Apartment',
         area:'4x10 m',
         price:2500,
-        image:'https://source.unsplash.com/random/?apartment',
+        image:'https://source.unsplash.com/random/?apartment,home',
         popular:true,
     },
     {
@@ -44,7 +44,7 @@ export const properties = [
         type:'Flat',
         area:'2x10 m',
         price:2500,
-        image:'https://source.unsplash.com/random/?apartment',
+        image:'https://source.unsplash.com/random/?apartment,building',
         popular:true,
     },
     {
@@ -56,7 +56,7 @@ export const properties = [
         type:'Villa',
         area:'4x10 m',
         price:5000,
-        image:'https://source.unsplash.com/random/?villa',
+        image:'https://source.unsplash.com/random/?villa,mansion',
         popular:true,
     },
     {
@@ -92,7 +92,7 @@ export const properties = [
         type:'Villa',
         area:'9x10 m',
         price:20000,
-        image:'https://source.unsplash.com/random/?villa',
+        image:'https://source.unsplash.com/random/?villa,mansion',
         popular:true,
     }
 ]
