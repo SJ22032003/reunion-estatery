@@ -38,7 +38,7 @@ function Rent() {
       {/* Filter */}
       <section>
         <Grid container my={4}>
-          <Grid item md={3} xs={12}>
+          <Grid item md={3} xs={12} sx={{minWidth:'100%'}}>
               <center>
                 <RentFilters />
               </center>
