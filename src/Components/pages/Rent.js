@@ -1,12 +1,13 @@
 import React from "react";
 import { Grid, Typography, TextField } from "@mui/material";
 import RentFilters from "./SearchFilters/RentFilters";
+import RentProperties from "./RentProperties";
 
 function Rent() {
   return (
     <main>
       <section>
-        <Grid container my={7}>
+        <Grid container sx={{marginTop:'4rem'}}>
           <Grid item md={9} sm={12}>
             <Typography
               variant="h1"
@@ -37,7 +38,7 @@ function Rent() {
       </section>
       {/* Filter */}
       <section>
-        <Grid container my={4}>
+        <Grid container>
           <Grid item md={3} xs={12} sx={{minWidth:'100%'}}>
               <center>
                 <RentFilters />
@@ -46,7 +47,11 @@ function Rent() {
         </Grid>
       </section>
       {/* List */}
-      <section></section>
+      <section>
+        <Grid container my={4}>
+          <RentProperties />
+        </Grid>
+      </section>
     </main>
   );
 }
