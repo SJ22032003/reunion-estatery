@@ -1,5 +1,6 @@
 export const properties = [
     {
+        id: 1,
         name:'Palm Habor',
         address:'2699 Green Valle, DL',
         city:'Delhi',
@@ -10,8 +11,10 @@ export const properties = [
         price:500,
         image:'https://source.unsplash.com/random/?house,building',
         popular:true,
+        favorite:false,
     },
     {
+        id: 2,
         name:'Braverly Hill',
         address:'2699 Street 2 Apt, GH',
         city:'Ghaziabad',
@@ -22,8 +25,10 @@ export const properties = [
         price:500,
         image:'https://source.unsplash.com/random/?house,building',
         popular:false,
+        favorite:false,
     },
     {
+        id: 3,
         name:'Bhagatpur',
         address:'209A Street 2 Apt, GH',
         city:'Ghaziabad',
@@ -34,8 +39,10 @@ export const properties = [
         price:2500,
         image:'https://source.unsplash.com/random/?apartment,home',
         popular:true,
+        favorite:false,
     },
     {
+        id: 4,
         name:'Spring Garden',
         address:'20Q Lane 2 Apt, NI',
         city:'Noida',
@@ -46,8 +53,10 @@ export const properties = [
         price:2500,
         image:'https://source.unsplash.com/random/?apartment,building',
         popular:true,
+        favorite:false,
     },
     {
+        id: 5,
         name:'Jal Hvan',
         address:'20Q Lane 2 Apt, GU',
         city:'Gurgaon',
@@ -58,8 +67,10 @@ export const properties = [
         price:5000,
         image:'https://source.unsplash.com/random/?villa,mansion',
         popular:true,
+        favorite:false,
     },
     {
+        id: 6,
         name:'Pink Mansion',
         address:'20Q Lane 2 Apt, JA',
         city:'Jaipur',
@@ -70,8 +81,10 @@ export const properties = [
         price:10000,
         image:'https://source.unsplash.com/random/?house,building',
         popular:false,
+        favorite:false,
     },
     {
+        id: 7,
         name:'Boor House',
         address:'20H street 2, MU',
         city:'Mumbai',
@@ -82,8 +95,10 @@ export const properties = [
         price:10000,
         image:'https://source.unsplash.com/random/?apartment',
         popular:false,
+        favorite:false,
     },
     {
+        id: 8,
         name:'Lalit Mandir',
         address:'20H street 2, LU',
         city:'Lucknow',
@@ -94,8 +109,10 @@ export const properties = [
         price:20000,
         image:'https://source.unsplash.com/random/?villa,mansion',
         popular:true,
+        favorite:false,
     },
     {
+        id: 9,
         name:'Antila',
         address:'Lane 21 Street 12 Shivpur, LU',
         city:'Lucknow',
@@ -106,8 +123,10 @@ export const properties = [
         price:10000,
         image:'https://source.unsplash.com/random/?house,building',
         popular:true,
+        favorite:false,
     },
     {
+        id: 10,
         name:'Raghavendra',
         address:'Apt 21 Street A lane 4, NJ',
         city:'Najafgarh',
@@ -118,8 +137,10 @@ export const properties = [
         price:5000,
         image:'https://source.unsplash.com/random/?apartment,home',
         popular:false,
+        favorite:false,
     },
     {
+        id: 11,
         name:'Nabhag',
         address:'25 Foota Road Vihar, NJ',
         city:'Najafgarh',
@@ -130,8 +151,10 @@ export const properties = [
         price:2500,
         image:'https://source.unsplash.com/random/?home,building',
         popular:false,
+        favorite:false,
     },
     {
+        id: 12,
         name:'Lake View',
         address:'Daal Lake near road 21, BN',
         city:'Banaras',
@@ -142,5 +165,6 @@ export const properties = [
         price:5000,
         image:'https://source.unsplash.com/random/?villa,home',
         popular:true,
+        favorite:false,
     },
 ]

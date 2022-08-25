@@ -9,13 +9,17 @@ import {
   Grid,
   Stack,
   Chip,
+  IconButton,
 } from "@mui/material";
 import { setPrice } from "../utils/util";
 import { makeStyles } from "@mui/styles";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import BedLogo from "../assets/beds.png";
 import bathroom from "../assets/bathroom.png";
 import areaLogo from "../assets/areaSubLogo.png";
+import { useDispatch } from "react-redux";
+import { getFavorite } from "../../redux/Action";
 
 const useStyles = makeStyles((theme) => ({
   price: {
@@ -30,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 function PropertiesCard({ property }) {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const {
     name,
     price,
@@ -41,7 +46,15 @@ function PropertiesCard({ property }) {
     image,
     city,
     popular,
+    favorite,
+    id,
   } = property;
+
+  // const [favorite, setFavorite] = React.useState(false);
+  const handleFav = (id,favorite) => {
+    dispatch(getFavorite(id,!favorite));
+  };
+
   return (
     <Box sx={{ width: { xs: "350px", sm: "400px", md: "350px" } }}>
       <Card sx={{ height: "fit-content" }} elevation={0}>
@@ -61,24 +74,39 @@ function PropertiesCard({ property }) {
           </Stack>
         )}
         <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            style={{
-              fontSize: "clamp(25px,1.7vw,29px)",
-              fontWeight: "bold",
-              color: "#7065ed",
-            }}
-          >
-            ${setPrice(price)}
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              sx={{ display: "inline" }}
+          <Grid container>
+            <Grid item xs={6}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                style={{
+                  fontSize: "clamp(25px,1.7vw,29px)",
+                  fontWeight: "bold",
+                  color: "#7065ed",
+                }}
+              >
+                ${setPrice(price)}
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  sx={{ display: "inline" }}
+                >
+                  /month
+                </Typography>
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sx={{ display: "flex", justifyContent: "flex-end" }}
             >
-              /month
-            </Typography>
-          </Typography>
+              <IconButton onClick={(e) => handleFav(id, favorite)}>
+                <FavoriteIcon
+                  sx={{ color: favorite ? "#7367f8" : "#eeedf2" }}
+                />
+              </IconButton>
+            </Grid>
+          </Grid>
           <Typography
             variant="body2"
             className={classes.name}

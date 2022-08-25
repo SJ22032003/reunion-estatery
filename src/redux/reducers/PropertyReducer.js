@@ -1,5 +1,10 @@
 import { properties } from "../../Components/data/PropertiesRent";
-import { GET_FILTERS, REMOVE_FILTERS, GET_SEARCH } from "../actionType";
+import {
+  GET_FILTERS,
+  REMOVE_FILTERS,
+  GET_SEARCH,
+  GET_FAVORITE,
+} from "../actionType";
 
 const initialState = {
   properties: properties,
@@ -29,6 +34,18 @@ export const PropertyReducer = (state = initialState, action) => {
           return property.name
             .toLowerCase()
             .includes(action.payload.toLowerCase());
+        }),
+      };
+      return newState;
+
+    case GET_FAVORITE:
+      newState = {
+        ...state,
+        properties: state.properties.map((property) => {
+          if (property.id === action.payload.id) {
+            return { ...property, favorite: action.payload.favorite };
+          }
+          return property;
         }),
       };
       return newState;
