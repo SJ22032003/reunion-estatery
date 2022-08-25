@@ -3,9 +3,6 @@ import {
   Typography,
   AppBar,
   Toolbar,
-  IconButton,
-  Stack,
-  Button,
 } from "@mui/material";
 
 function Footer() {
