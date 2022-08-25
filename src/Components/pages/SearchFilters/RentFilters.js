@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     textAlign: "left",
     margin: "6px 0 0 10px",
-    fontSize: "clamp(15px,2vw,20px)",
+    fontSize: "clamp(13px,2vw,17px)",
   },
   filterIcon:{
     width: "30px",
@@ -45,6 +45,8 @@ function RentFilters() {
       backgroundColor:'#e7e6f9',
       color:'#7367f8',
       borderRadius:'50%',
+      padding:'3px',
+      marginRight:'10px',
     })
   }
 
@@ -63,7 +65,7 @@ function RentFilters() {
             maxWidth: "1200px",
             borderRadius:'8px',
             backgroundColor:'#fff',
-            padding:'20px 8px',
+            padding:'18px 8px',
           }}
         >
           <Grid
@@ -193,7 +195,7 @@ function RentFilters() {
                   borderRadius: "10px",
                   marginRight: "5px",
                   fontSize: "clamp(13px, 1.2vw, 16px)",
-                  padding: "12px 25px",
+                  padding: "10px 20px",
                   color: "#FFFFFF",
                   textTransform: "none",
                   '&:hover': {
