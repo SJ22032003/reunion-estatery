@@ -9,6 +9,7 @@ export const properties = [
         area:'8x10 m',
         price:500,
         image:'https://source.unsplash.com/random/?house',
+        popular:true,
     },
     {
         name:'Braverly Hill',
@@ -20,6 +21,7 @@ export const properties = [
         area:'2x10 m',
         price:500,
         image:'https://source.unsplash.com/random/?studio',
+        popular:false,
     },
     {
         name:'Bhagatpur',
@@ -31,6 +33,7 @@ export const properties = [
         area:'4x10 m',
         price:2500,
         image:'https://source.unsplash.com/random/?apartment',
+        popular:true,
     },
     {
         name:'Spring Garden',
@@ -42,6 +45,7 @@ export const properties = [
         area:'2x10 m',
         price:2500,
         image:'https://source.unsplash.com/random/?apartment',
+        popular:true,
     },
     {
         name:'Jal Hvan',
@@ -53,6 +57,7 @@ export const properties = [
         area:'4x10 m',
         price:5000,
         image:'https://source.unsplash.com/random/?villa',
+        popular:true,
     },
     {
         name:'Pink Mansion',
@@ -64,6 +69,7 @@ export const properties = [
         area:'8x10 m',
         price:10000,
         image:'https://source.unsplash.com/random/?house',
+        popular:false,
     },
     {
         name:'Boor House',
@@ -75,6 +81,7 @@ export const properties = [
         area:'9x10 m',
         price:10000,
         image:'https://source.unsplash.com/random/?apartment',
+        popular:false,
     },
     {
         name:'Lalit Mandir',
@@ -86,5 +93,6 @@ export const properties = [
         area:'9x10 m',
         price:20000,
         image:'https://source.unsplash.com/random/?villa',
+        popular:true,
     }
 ]

@@ -7,7 +7,7 @@ function Rent() {
   return (
     <main>
       <section>
-        <Grid container sx={{marginTop:'4rem'}}>
+        <Grid container sx={{ marginTop: "4rem" }}>
           <Grid item md={9} sm={12}>
             <Typography
               variant="h1"
@@ -15,7 +15,7 @@ function Rent() {
                 fontSize: "clamp(35px,3.3vw,45px)",
                 fontWeight: "bold",
                 margin: "8px 0 0 0",
-                textAlign: { xs: "center" , md: "left"},
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               Search properties to rent
@@ -39,16 +39,16 @@ function Rent() {
       {/* Filter */}
       <section>
         <Grid container>
-          <Grid item md={3} xs={12} sx={{minWidth:'100%'}}>
-              <center>
-                <RentFilters />
-              </center>
+          <Grid item md={3} xs={12} sx={{ minWidth: "100%" }}>
+            <center>
+              <RentFilters />
+            </center>
           </Grid>
         </Grid>
       </section>
       {/* List */}
       <section>
-        <Grid container my={4}>
+        <Grid container my={4} sx={{display:{xs:'flex',md:''},justifyContent:'center'}}>
           <RentProperties />
         </Grid>
       </section>
