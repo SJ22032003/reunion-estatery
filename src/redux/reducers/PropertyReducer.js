@@ -1,5 +1,5 @@
 import { properties } from "../../Components/data/PropertiesRent";
-import { GET_BED } from "../actionType";
+import { GET_FILTERS, REMOVE_FILTERS } from "../actionType";
 
 const initialState = {
   properties: properties,
@@ -8,12 +8,20 @@ const initialState = {
 export const PropertyReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
-    case GET_BED:
+    case GET_FILTERS:
       newState = {
         ...state,
-        properties: state.properties.filter((property) => property.beds === action.payload),
+        properties: action.payload,
       };
       return newState;
+
+    case REMOVE_FILTERS:
+      newState = {
+        ...state,
+        properties: properties,
+      };
+      return newState;
+
     default:
       return state;
   }

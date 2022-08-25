@@ -89,6 +89,9 @@ function PropertiesCard({ property }) {
           <Typography variant="body2" color="textSecondary" my={1}>
             {address} {city}
           </Typography>
+          <Typography variant="body2" color="textSecondary" my={1}>
+            {type}
+          </Typography>
           <Divider />
           <Grid container sx={{ marginTop: "15px" }}>
             <Grid item xs={4}>

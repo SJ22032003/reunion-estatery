@@ -14,7 +14,7 @@ function Rent() {
               sx={{
                 fontSize: "clamp(35px,3.3vw,45px)",
                 fontWeight: "bold",
-                margin: "8px 0 0 0",
+                marginTop: "8px",
                 textAlign: { xs: "center", md: "left" },
               }}
             >

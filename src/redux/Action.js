@@ -1,8 +1,15 @@
-import { GET_BED } from "./actionType";
+import { GET_FILTERS } from "./actionType";
+import { REMOVE_FILTERS } from "./actionType";
 
-export const getBed = (beds) => {
-    return {
-        type: GET_BED,
-        payload: beds
-    };
-}
+export const getFilters = (filters) => {
+  return {
+    type: GET_FILTERS,
+    payload: filters,
+  };
+};
+
+export const removeFilters = () => {
+  return {
+    type: REMOVE_FILTERS,
+  };
+};
