@@ -7,10 +7,10 @@ export const locations = [
   { value: "Gurgaon", label: "Gurgaon" },
   { value: "Noida", label: "Noida" },
   { value: "Najafgarh", label: "Najafgarh" },
-  { value: "Mumbai", label: "Mumbai" },
-  { value: "Lucknow", label: "Lucknow" },
-  { value: "Banaras", label: "Banaras" },
-  { value: "Jaipur", label: "Jaipur" },
+  // { value: "Mumbai", label: "Mumbai" },
+  // { value: "Lucknow", label: "Lucknow" },
+  // { value: "Banaras", label: "Banaras" },
+  // { value: "Jaipur", label: "Jaipur" },
 ];
 
 export const prices = [
