@@ -50,7 +50,6 @@ function PropertiesCard({ property }) {
     id,
   } = property;
 
-  // const [favorite, setFavorite] = React.useState(false);
   const handleFav = (id,favorite) => {
     dispatch(getFavorite(id,!favorite));
   };

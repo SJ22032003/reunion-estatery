@@ -37,7 +37,6 @@ export const PropertyReducer = (state = initialState, action) => {
         }),
       };
       return newState;
-
     case GET_FAVORITE:
       newState = {
         ...state,
