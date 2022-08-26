@@ -13,6 +13,7 @@ import {
 import Logo from "../../assets/logo.png";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import {navbar,auth} from '../../data/SelectOptions'
 
 const useStyles = makeStyles((theme) => ({
   myLogo: {
@@ -23,14 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 function NavbarMobile() {
   const classes = useStyles();
-  const [navTabs, setNavTabs] = useState([
-    "Rent",
-    "Buy",
-    "Sell",
-    "Manage",
-    "Resource",
-  ]);
-  const [authIn, setAuthIn] = useState(["Login", "Signup"]);
   const [activeNavbar, setActiveNavbar] = useState(false);
 
   const handleNavbar = () => {
@@ -77,7 +70,7 @@ function NavbarMobile() {
                 left: "1px",
               }}
             >
-              {navTabs.map((nav, index) => {
+              {navbar.map((nav, index) => {
                 return (
                   <NavLink to={`/${nav}`} style={{ margin: "5px 10px" }}>
                     <Button
@@ -108,7 +101,7 @@ function NavbarMobile() {
                   justifyContent: "center",
                 }}
               >
-                {authIn.map((item, index) => {
+                {auth.map((item, index) => {
                   return (
                     <Grid item sx={6} my={1}>
                       <Button
