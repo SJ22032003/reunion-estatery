@@ -10,6 +10,7 @@ import {
   Button,
 } from "@mui/material";
 import Logo from "../../assets/logo.png";
+import { navbar, auth } from "../../data/SelectOptions";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,16 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 function NavbarDesktop() {
   const classes = useStyles();
-  const [navTabs, setNavTabs] = useState([
-    "Rent",
-    "Buy",
-    "Sell",
-    "Manage",
-    "Resource",
-  ]);
-  const [authIn, setAuthIn] = useState(["Login", "Signup"]);
-  const [activeNavTab, setActiveNavTab] = useState({});
-
   const handleNavTab = () => {};
 
   return (
@@ -53,9 +44,9 @@ function NavbarDesktop() {
             Estatery
           </Typography>
           <Stack direction="row" spacing="3">
-            {navTabs.map((nav, index) => {
+            {navbar.map((nav, index) => {
               return (
-                <NavLink to={`/${nav}`} style={{margin:"0 10px 0 0"}}>
+                <NavLink to={`/${nav}`} style={{ margin: "0 10px 0 0" }}>
                   <Button
                     onClick={handleNavTab}
                     key={`${nav}${index}`}
@@ -81,7 +72,7 @@ function NavbarDesktop() {
             spacing="2"
             sx={{ flexGrow: "1", justifyContent: "flex-end" }}
           >
-            {authIn.map((item, index) => {
+            {auth.map((item, index) => {
               return (
                 <Button
                   key={`${item}${index}`}
