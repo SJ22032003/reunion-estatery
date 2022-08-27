@@ -4,10 +4,12 @@ import {
   REMOVE_FILTERS,
   GET_SEARCH,
   GET_FAVORITE,
+  SET_LOADER,
 } from "../actionType";
 
 const initialState = {
   properties: properties,
+  loader: true,
 };
 
 export const PropertyReducer = (state = initialState, action) => {
@@ -17,6 +19,7 @@ export const PropertyReducer = (state = initialState, action) => {
       newState = {
         ...state,
         properties: action.payload,
+        loader: true,
       };
       return newState;
 
@@ -24,6 +27,7 @@ export const PropertyReducer = (state = initialState, action) => {
       newState = {
         ...state,
         properties: properties,
+        loader: true,
       };
       return newState;
 
@@ -35,6 +39,7 @@ export const PropertyReducer = (state = initialState, action) => {
             .toLowerCase()
             .includes(action.payload.toLowerCase());
         }),
+        loader: true,
       };
       return newState;
     case GET_FAVORITE:
@@ -46,6 +51,14 @@ export const PropertyReducer = (state = initialState, action) => {
           }
           return property;
         }),
+        loader: true,
+      };
+      return newState;
+
+    case SET_LOADER:
+      newState = {
+        ...state,
+        loader: action.payload,
       };
       return newState;
 
