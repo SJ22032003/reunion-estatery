@@ -12,7 +12,6 @@ function RentSearch() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(search);
     dispatch(getSearch(search));
   };
 
