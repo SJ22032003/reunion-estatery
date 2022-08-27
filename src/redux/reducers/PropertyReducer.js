@@ -51,7 +51,7 @@ export const PropertyReducer = (state = initialState, action) => {
           }
           return property;
         }),
-        loader: true,
+        loader: false,
       };
       return newState;
 
