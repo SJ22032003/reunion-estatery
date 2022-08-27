@@ -3,9 +3,9 @@ import Loading from '../assets/loading.svg'
 
 function Loader() {
   return (
-    <cneter>
+    <center>
         <img src={Loading} alt="loading" />
-    </cneter>
+    </center>
   )
 }
 
