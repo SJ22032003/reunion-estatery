@@ -3,7 +3,6 @@ import {
   GET_FILTERS,
   REMOVE_FILTERS,
   GET_SEARCH,
-  GET_FAVORITE,
   SET_LOADER,
 } from "../actionType";
 
@@ -40,18 +39,6 @@ export const PropertyReducer = (state = initialState, action) => {
             .includes(action.payload.toLowerCase());
         }),
         loader: true,
-      };
-      return newState;
-    case GET_FAVORITE:
-      newState = {
-        ...state,
-        properties: state.properties.map((property) => {
-          if (property.id === action.payload.id) {
-            return { ...property, favorite: action.payload.favorite };
-          }
-          return property;
-        }),
-        loader: false,
       };
       return newState;
 

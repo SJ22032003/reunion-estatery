@@ -4,9 +4,7 @@ import { Grid, Typography } from "@mui/material";
 import PropertiesCard from "../Common/PropertiesCard";
 
 function Favorite() {
-  const myFavorite = useSelector((state) =>
-    state.PropertyReducer.properties.filter((property) => property.favorite)
-  );
+  const myFavorite = useSelector((state) => state.FavoriteReducer.myFavProperties.filter((property) => property.favorite));
 
   return (
     <Grid container>
@@ -27,9 +25,9 @@ function Favorite() {
         })
       ) : (
         <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
-            <Typography variant="body2" color="textSecondary" my={1}>
-              You have no favorite properties.
-            </Typography>
+          <Typography variant="body2" color="textSecondary" my={1}>
+            You have no favorite properties.
+          </Typography>
         </Grid>
       )}
     </Grid>
