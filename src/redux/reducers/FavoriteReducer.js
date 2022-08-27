@@ -25,7 +25,6 @@ export const FavoriteReducer = (state = initailState, action) => {
       myFavorite = newState.myFavProperties;
       localStorage.setItem("myFavDataArray", JSON.stringify(myFavorite));
       localStorage.setItem("myFavData", JSON.stringify(newState));
-      console.log(newState);
       return newState;
 
     default:

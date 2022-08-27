@@ -25,8 +25,7 @@ function RentProperties() {
     }
     properties.push(property);
   }
-  console.log(properties);
-
+ 
   // Static Data usually don't take time to load
   setTimeout(() => {
     dispatch(setLoader(false));
