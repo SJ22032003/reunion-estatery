@@ -14,7 +14,7 @@ export const getFilteredProperties = (myFilteredData) => {
     );
   }
   if (price) {
-    filteredData = filteredData.filter((property) => property.price == price);
+    filteredData = filteredData.filter((property) => property.price >= price && property.price <= 2*price);
   }
   if (beds) {
     filteredData = filteredData.filter((property) => property.beds == beds);
